@@ -535,11 +535,14 @@ export default function Chat() {
           <AutosizeTextarea
             value={input}
             onChange={handleInputChange}
-            onEnterKeyDown={(e: React.KeyboardEvent<HTMLTextAreaElement>) => {
-              if (input.trim()) {
-                const form = e.currentTarget.form;
-                if (form) {
-                  form.requestSubmit();
+            onKeyDown={(e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+              if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                if (input.trim()) {
+                  const form = e.currentTarget.form;
+                  if (form) {
+                    form.requestSubmit();
+                  }
                 }
               }
             }}
