@@ -535,6 +535,14 @@ export default function Chat() {
           <AutosizeTextarea
             value={input}
             onChange={handleInputChange}
+            onEnterKeyDown={(e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+              if (input.trim()) {
+                const form = e.currentTarget.form;
+                if (form) {
+                  form.requestSubmit();
+                }
+              }
+            }}
             placeholder="Message"
             minHeight={38}
             maxHeight={100}

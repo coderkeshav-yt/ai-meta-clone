@@ -102,6 +102,19 @@ export const AutosizeTextarea = React.forwardRef<
           setTriggerAutoSize(e.target.value);
           onChange?.(e);
         }}
+        onKeyDown={(e) => {
+          // Call the original onKeyDown if it exists
+          props.onKeyDown?.(e);
+          
+          // Handle Enter key submission
+          if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();
+            const form = textAreaRef.current?.form;
+            if (form) {
+              form.requestSubmit();
+            }
+          }
+        }}
       />
     );
   }

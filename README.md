@@ -1,4 +1,4 @@
-# Meta AI Clone 🤖 ( but on steroids )
+# Meta AI Clone 🤖 
 
 A modern, feature-rich AI chat interface inspired by Meta's AI assistant, built with Next.js and cutting-edge AI technologies.
 
@@ -35,7 +35,7 @@ A modern, feature-rich AI chat interface inspired by Meta's AI assistant, built 
 1. Clone the repository
 
 ```bash
-git clone https://github.com/xeven777/meta-ai-clone.git
+git clone https://github.com/coderkeshav-yt/ai-meta-clone.git
 ```
 
 2. Install dependencies
@@ -60,6 +60,3 @@ CEREBRAS_API_KEY=""
 bun run dev
 ```
 
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check [issues page](https://github.com/xeven777/meta-ai-clone/issues).
